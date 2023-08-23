@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecturer</title>
+    <link rel="stylesheet" type="text/css" href="style_entry.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="navbar">
+  <a href="homepage.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">FAQs</a>
+  <!-- Add more navigation links as needed -->
+</div>
+
+    <form>
+
+  <div class="form-group">
+    <label for="exampleInputLecturerID"><br><div class="form-txt">Lecturer ID</div></label>
+    <input type="text" class="form-control" id="exampleInputLecturerID" placeholder="Enter Lecturer ID" name="lecID">
+    
+  <div class="form-group">
+    <label for="exampleInputEmail1"><br><div class="form-txt">Email Address</div></label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email" name="lecEmail">
+    <small id="emailHelp" class="form-text text-muted"><br><div class="form-txt">We'll never share your email with anyone else.</div></small>
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleInputPrivilegeKey"><br><div class="form-txt">Privilege Key</div></label>
+    <input type="text" class="form-control" id="exampleInputPrivilegeKey" placeholder="Enter Privilege Key" name="PK">
+  </div>
+  <h1>Select Reason</h1>
+
+  <br>
+
+
+<div class="form-group">
+            <label for="studentIssue"><br>
+                <div class="form-txt">Select Reason of Visit:</div>
+            </label>
+            <select class="form-control" id="lecIssue" name="lecIssue">
+                <option value="Printing docs">Printing docs</option>
+                <option value="CAT Schedule">CAT Schedule</option>
+                <option value="Discipline Case">Discipline Case</option>
+                <option value="Class Inquiry">Class Inquiry</option>
+                <option value="Other">Other</option>
+            </select>  
+
+            <br>
+            
+        <h1>Admin Selection</h1>
+        <div class="form-group">
+            <label for="peopleSelection"><br>
+                <div class="form-txt">Select Admin:</div>
+            </label>
+            <select class="form-control" id="peopleSelection" name="peopleSelection">
+                <option value="Danson Mulinge">Danson Mulinge</option>
+                <option value="Charncidoe Shikoli">Charncidoe Shikoli</option>
+                <option value="Front Desk">Front Desk</option>
+                <option value="Jack Kitsao">Jack Kitsao</option>
+                <option value="Patience Mwangi">Patience Mwangi</option>
+                <option value="Mark Wendo">Mark Wendo</option>
+            </select>
+        </div>
+
+ 
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+    
+</body>
+</html>

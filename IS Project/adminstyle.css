@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.people-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.person-box {
+    width: 100%;
+    max-width: 300px; /* Limit the width of the boxes */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Create space between the person boxes */
+.person-box:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.red-box {
+    background-color: #FF5733;
+    color: #FFF;
+}
+
+.yellow-box {
+    background-color: #FFC300;
+}
+
+.blue-box {
+    background-color: #33B5E5;
+    color: #FFF;
+}
+
+.person-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.action-button {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 16px;
+    background-color: #a4baf5;
+    color: #FFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    box-shadow: rgba(0, 0, 0,.8) -4px;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+
+}
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+}
+.navbar a:hover {
+    background-color: #555;
+}

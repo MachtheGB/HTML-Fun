@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.issue-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.issue-container > .issue-box:nth-child(4),
+.issue-container > .issue-box:nth-child(5),
+.issue-container > .issue-box:nth-child(6) {
+    margin-top: 20px;
+}
+
+/* Add margin between the second and third rows of boxes */
+.issue-container > .issue-box:nth-child(7),
+.issue-container > .issue-box:nth-child(8),
+.issue-container > .issue-box:nth-child(9) {
+    margin-top: 20px;
+}
+
+
+.red-box {
+    background-color: #FF5733;
+    color: #FFF;
+    border-radius: 10px;
+}
+
+.yellow-box {
+    background-color: #FFC300;
+    border-radius: 10px;
+}
+
+.blue-box {
+    background-color: #33B5E5;
+    color: hwb(0 100% 0%);
+    border-radius: 10px;
+}
+
+.issue-label {
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+
+.description {
+    width: 80%;
+    margin-top: 10px;
+    resize: vertical;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.action-button {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 16px;
+    background-color: #555;
+    color: #FFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    box-shadow: rgba(0, 0, 0,.8) -4px;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+
+}
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+}
+.navbar a:hover {
+    background-color: #555;
+}
