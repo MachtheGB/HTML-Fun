@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archery Registration Form</title>
+    <link rel="stylesheet" href="formstyle.css">
+
+    <center> <div class="topBar">
+        <a href="Macharia Ndegwa.html" style="margin-right: 40px; color: black;">Macharia's Profile</a>
+        <a href="Mike Irungu.html" style="margin-left: 40px; color: black;">Mike's Profile</a>
+        <a href="https://www.facebook.com/strathmorearchers/" style= "margin-left: 40px; color:black;">Strathmore Archery Club</a> 
+        <a href="Archery1.html" style="margin-left: 40px; color:black; display: flexbox;">Home</a>
+        <a href="Lab3.html" style="margin-left: 40px; color:black; display: flexbox;">Sign up</a>
+    </div>
+    </center>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+    
+            const firstname = document.getElementById('firstname').value;
+            const middlename = document.getElementById('middlename').value;
+            const surname = document.getElementById('surname').value;
+            const coursename = document.getElementById('coursename').value;
+            const phonenumber = document.getElementById('phonenumber').value;
+            const email = document.getElementById('email').value;
+            const dob = document.getElementById('dob').value;
+            const role = document.getElementById('role').value;
+    
+            const regexAlphabet = /^[A-Za-z]+$/;
+    
+            if (!firstname.match(regexAlphabet)) {
+                document.getElementById('result1').innerHTML = "This field only allows *ALPHABET CHARACTER* entries!";
+                return false;
+            } else {
+                document.getElementById('result1').innerHTML = "";
+            }
+    
+            if (!middlename.match(regexAlphabet)) {
+                document.getElementById('result2').innerHTML = "This field only allows *ALPHABET CHARACTER* entries!";
+                return false;
+            } else {
+                document.getElementById('result2').innerHTML = "";
+            }
+    
+            if (!surname.match(regexAlphabet)) {
+                document.getElementById('result3').innerHTML = "This field only allows *ALPHABET CHARACTER* entries!";
+                return false;
+            } else {
+                document.getElementById('result3').innerHTML = "";
+            }
+    
+            if (!coursename.match(regexAlphabet)) {
+                document.getElementById('result4').innerHTML = "This field only allows *ALPHABET CHARACTER* entries!";
+                return false;
+            } else {
+                document.getElementById('result4').innerHTML = "";
+            }
+    
+            if (email.indexOf("@") === -1 || email.length < 6) {
+                document.getElementById('result5').innerHTML = "Enter a valid email address!";
+                return false;
+            } else {
+                document.getElementById('result5').innerHTML = "";
+            }
+    
+            if (phonenumber.length !== 10 || !phonenumber.match(/^[0-9]+$/)) {
+                document.getElementById('result6').innerHTML = "This Field requires a *10 DIGIT INPUT*!";
+                return false;
+            } else {
+                document.getElementById('result6').innerHTML = "";
+            }
+
+        const currentDate = new Date();
+        const userDOB = new Date(dob);
+        const age = currentDate.getFullYear() - userDOB.getFullYear();
+
+        if (age < 18) {
+            document.getElementById('result7').innerHTML = "You must be at least 18 years old to register.";
+            return false;
+        } else {
+            document.getElementById('result7').innerHTML = "Above 18";
+        }
+
+    
+            alert("Form submition SUCCESS!");
+        }
+    </script>
+    
+    
+</head>
+<body>
+    <div class="container">
+        <form id="form" action="/" onsubmit="return validateForm(event)">
+
+            <h1>Registration</h1>
+            <!--input class will be used to style and show error messages in the form -->
+
+            <!-- Select field -->
+            <div class="input-control">
+                <label for="role">Select your role:</label>
+                <select id="role" name="role">
+                    <option value="student">Student</option>
+                    <option value="lecturer">Lecturer</option>
+                    <option value="coach">Coach</option>
+                </select>
+                <div class="error"></div>
+            </div>
+
+            <!-- First input -->
+            <div class="input-control">
+                <label for="firstname">First Name</label>
+                <input id="firstname" name="firstname" type="text">
+                <div class="error" id="result1"></div>
+            </div>
+
+            <!-- Second input -->
+            <div class="input-control">
+                <label for="middlename">Middle Name</label>
+                <input id="middlename" name="middlename" type="text">
+                <div class="error" id="result2"></div>
+            </div>
+
+            <!-- Third input -->
+            <div class="input-control">
+                <label for="surname">Surname</label>
+                <input id="surname" name="surname" type="text">
+                <div class="error" id="result3"></div>
+            </div>
+
+            <!-- Fourth input -->
+            <div class="input-control">
+                <label for="coursename">Course name</label>
+                <input id="coursename" name="coursename" type="text">
+                <div class="error" id="result4"></div>
+            </div>
+
+            <!-- Fifth input -->
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email">
+                <div class="error" id="result5"></div>
+            </div>
+
+            <!-- Sixth input -->
+            <div class="input-control">
+                <label for="phonenumber">Phonenumber</label>
+                <input id="phonenumber" name="phonenumber" type="tel">
+                <div class="error" id="result6"></div>
+            </div>
+
+            <!-- Date of Birth input -->
+            <div class="input-control">
+                <label for="dob">Date of Birth</label>
+                <input id="dob" name="dob" type="date">
+                <div class="error" id="result7"></div>
+            </div>
+
+            <button type="submit">Sign Up</button>
+
+        </form>
+    </div>
+    
+</body>
+</html>
